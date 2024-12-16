@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Physics Quest-RJ</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #121212; /* Dark background */
+      color: #ffffff; /* White text */
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 100vh;
+    }
+
+    canvas {
+      display: block;
+      margin: 20px;
+      background-color: #1e1e1e; /* Dark canvas background */
+      border: 2px solid #333333; /* Subtle border */
+      flex: 1;
+    }
+
+    .panel {
+      width: 200px;
+      background-color: #1e1e1e;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .panel h2 {
+      text-align: center;
+      color: #4CAF50; /* Green heading for formulas */
+    }
+
+    .panel ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .panel li {
+      margin: 10px 0;
+      color: #ffffff;
+      font-size: 18px; /*////////////*/
+    }
+
+    .panel li span {
+      color: #4CAF50;
+    }
+
+    #restartMessage {
+      color: #ff6f61; /* Highlighted text for restart message */
+      font-weight: bold;
+      text-align: center;
+    }
+
+    #ui {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #3a3a3a;
+      color: #ffffff;
+      border: 1px solid #555555;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #555555;
+    }
+
+
+  #info {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px; /* Increased text size */
+    }
+
+    #nextButton {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Left Panel (Formulas) -->
+  <div class="panel" id="leftPanel">
+    <h2>Physics Formulas- rj</h2>
+    <ul>
+      <li><strong>Force (F):</strong> <span>F = m × a</span>, where <span>m</span> is mass and <span>a</span> is acceleration.</li>
+      <li><strong>Acceleration (a):</strong> <span>a = F / m</span>, where <span>F</span> is force and <span>m</span> is mass.</li>
+      <li><strong>Momentum (p):</strong> <span>p = m × v</span>, where <span>m</span> is mass and <span>v</span> is velocity.</li>
+      <li><strong>Kinetic Energy (KE):</strong> <span>KE = 0.5 × m × v²</span></li>
+      <li><strong>Potential Energy (PE):</strong> <span>PE = m × g × h</span>, where <span>g</span> is acceleration due to gravity and <span>h</span> is height.</li>
+    </ul>
+  </div>
+
+  <!-- Main Canvas Area -->
+  <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+  <!-- Right Panel (Info and Controls) -->
+  <div class="panel">
+    <div id="info">
+      Level-rj: 1 | Force: 0 N | Velocity: 0 m/s | Acceleration: 0 m/s² | BY RISHABH 
+    </div>
+    <button id="nextButton">Next Level-rj</button>
+    <div id="restartMessage"></div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
